@@ -1,13 +1,13 @@
 ## ials++ with CUDA
 
-This is an implemenation of [ialspp](https://arxiv.org/abs/2110.14044) algorithm, which allows ALS training in very high dimension (>1024) with CUDA (cuALS)
+This is an implementation of [ialspp](https://arxiv.org/abs/2110.14044) algorithm, which allows ALS training in very high dimensions (>1024) with CUDA (cuALS)
 
-Implementations of CUDA ALS of [implicit](https://github.com/benfred/implicit) and [buffalo](https://github.com/kakao/buffalo), (and maybe other als implemenations)do not allow training with higher dimension than 1024.
+Implementations of CUDA ALS of [implicit](https://github.com/benfred/implicit) and [buffalo](https://github.com/kakao/buffalo), (and maybe other als implementations) do not allow training with higher dimensions than 1024.
 This is because cuda threads cannot have larger than 1024. In CPU training, having high dimensionality is possible but it comes with slow training speed.
 
-By block optimization, this implementation allow model training in higher dimensions, which shows competitive performance against modern deep-learning based recommender systems(https://arxiv.org/abs/2110.14037)
+By block optimization, this implementation allows model training in higher dimensions, which shows competitive performance against modern deep-learning-based recommender systems(https://arxiv.org/abs/2110.14037)
 
-This also contains basic implementation of ALS with conjugate gradient (cyALS)
+This also contains a basic implementation of ALS with conjugate gradient (cyALS)
 
 #### Example
 ```python
